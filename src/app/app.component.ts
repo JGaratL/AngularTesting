@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-calculator';
+  title = 'calculator';
+  firstNumber: number = 0;
+  secondNumber: number = 0;
+  result: number = 0;
+
+  addition() {
+    this.result = this.firstNumber + this.secondNumber;
+  }
+
+  subtraction() {
+    this.result = this.firstNumber - this.secondNumber;
+  }
+
+  multiply() {
+    this.result = this.firstNumber * this.secondNumber;
+  }
+
+  reset() {
+    this.firstNumber = 0;
+    this.secondNumber = 0;
+    this.result = 0;
+  }
 }
